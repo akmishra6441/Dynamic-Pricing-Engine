@@ -1,8 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-# Using SQLite for zero-config local development on macOS. 
-# Swap to: "postgresql://user:password@localhost/dbname" for production.
 SQLALCHEMY_DATABASE_URL = "sqlite:///./pricing_engine.db"
 
 engine = create_engine(

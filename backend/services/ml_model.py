@@ -8,6 +8,5 @@ def predict_demand(price: float, competitor_price: float, base_demand: int) -> f
         return 0.0
         
     price_ratio = competitor_price / price
-    # Simulated elasticity curve
     expected_demand = base_demand * (price_ratio ** 1.5) 
     return max(0, expected_demand)

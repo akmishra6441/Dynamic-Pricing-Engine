@@ -13,9 +13,8 @@ def calculate_optimal_price(current_price: float, comp_price: float, cost: float
         p = price_array
         demand = predict_demand(p, comp_price, base_demand)
         profit = (p - cost) * demand
-        return -profit # Minimize negative profit to find the maximum positive profit
+        return -profit 
 
-    # Bounds: Do not sell below cost + 5% margin, cap at 2x cost to prevent price gouging
     bounds = [(cost * 1.05, cost * 2.0)]
     initial_guess = [current_price]
 

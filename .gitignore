@@ -1,0 +1,23 @@
+# =========================
+# Node / React (Frontend)
+# =========================
+node_modules/
+build/
+dist/
+.env
+
+# =========================
+# Python (Backend)
+# =========================
+venv/
+env/
+__pycache__/
+*.pyc
+*.sqlite3
+pricing_engine.db
+
+# =========================
+# OS Files (Mac/Windows)
+# =========================
+.DS_Store
+Thumbs.db

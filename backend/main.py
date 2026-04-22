@@ -4,15 +4,13 @@ from models.schemas import PricingRequest, PricingResponse
 from services.pricing_engine import calculate_optimal_price
 from database.db import engine, Base
 
-# Create database tables (if any defined in Base)
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Dynamic Pricing Engine API")
 
-# Allow React frontend to communicate (CORS)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"], # Restrict to frontend local server
+    allow_origins=["http://localhost:3000"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
